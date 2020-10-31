@@ -147,6 +147,19 @@ const wordsFind = [
   'disobedience'
 ];
 
+///Class solution
+function doesWordExist(list, wordToFind) {
+  if (!list.length) {
+    return null;
+  }
+  for (let item of list) {
+    if (item === wordToFind) {
+      return true;
+    }
+  }
+  return false;
+}
+
 // Iteration #7: Count repetition
 const wordsCount = [
   'machine',
@@ -162,8 +175,19 @@ const wordsCount = [
   'matter'
 ];
 
-// Iteration #8: Bonus
+///Class solution
+function howManyTimes(list, wordToFind) {
+  let accumulator = 0;
+  for (let item of list) {
+    if (item === wordToFind) {
+      accumulator++;
+    }
+  }
+  return accumulator;
+}
 
+// Iteration #8: Bonus
+//at least two nested for loops
 const matrix = [
   [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
   [
