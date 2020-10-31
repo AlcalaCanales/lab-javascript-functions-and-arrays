@@ -18,8 +18,8 @@ const words = [
 ];
 
 function findLongestWord(c) {
-  a = 0;
-  word = '';
+  let a = 0;
+  let word = '';
   for (let i = 0; i < c.length; i++) {
     if (c[i].length > a) {
       a = c[i].length;
