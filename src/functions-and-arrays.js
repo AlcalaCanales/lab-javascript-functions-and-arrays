@@ -48,6 +48,8 @@ function sumNumbers(numbers) {
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
+//my solution
+/*
 function averageNumbers(array) {
   if (array.length === 0) {
     return null;
@@ -58,6 +60,18 @@ function averageNumbers(array) {
       numbersSum = numbersSum + array[i];
     }
     return numbersSum / array.length;
+  }
+}
+*/
+
+//class solution
+function averageNumbers(list) {
+  if (list.length === 0) {
+    return null;
+  } else {
+    const sumOfAllNumbers = sumNumbers(list);
+    const average = sumOfAllNumbers / list.length;
+    return average;
   }
 }
 
@@ -110,8 +124,7 @@ const wordsUnique = [
 function uniquifyArray(wordsUnique) {
   if (wordsUnique.length === 0) {
     return null;
-  }
-  if (wordsUnique.length > 0) {
+  } else {
     let a = [];
     for (let word of wordsUnique) {
       if (a.indexOf(word) < 0) {
